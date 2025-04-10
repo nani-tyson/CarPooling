@@ -36,7 +36,6 @@ const CreateRide = ({ onRideCreated }) => {
     try {
       const res = await api.post("/rides", form, { withCredentials: true });
       alert("Ride created successfully!");
-      navigate("/driver", { state: { refreshRides: true } });
     } catch (err) {
       alert("Failed to create ride.");
       console.error(err);
